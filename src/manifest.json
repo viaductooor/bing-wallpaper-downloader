@@ -1,0 +1,24 @@
+{
+
+    "manifest_version": 2,
+    "name": "bing-wallpaper-downloader",
+    "version": "1.0",
+  
+    "description": "Download wallpapers from cn.bing.com. Open cn.bing.com and you'll see IMAGE OF DAY and RECENT HOMEPAGE IMAGES, click it and the window will redirect to its resource picture with resolution of 1920x1080. Ban the Extension if you want surf the original pages.",
+  
+    "icons": {
+      "48": "icons/favicon.ico"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://cn.bing.com/"],
+        "js": ["main.js"]
+      }
+    ],
+    "applications": {
+        "gecko": {
+          "id": "bing_wallpaper@lab1505.com"
+        }
+      }
+}
